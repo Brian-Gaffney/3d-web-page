@@ -1,0 +1,89 @@
+* {
+	cursor: none;
+}
+
+body {
+	overflow:hidden;
+}
+
+.cursor {
+	position: absolute;
+	z-index:100;
+}
+
+.cursor-left {
+	width:20px;
+	height:20px;
+}
+
+.cursor-right {
+	width:22px;
+	height:22px;
+}
+
+#left {
+	float:left;
+	width:50%;
+	height:100%;
+	/*background:#ABABEE;*/
+}
+
+#right {
+	float:left;
+	width:50%;
+	height:100%;
+	/*background:#ABEEAB;*/
+}
+
+h1 {
+	font-size:25px;
+	font-weight: bold;
+
+	margin:15px;
+}
+
+.box {
+	width:100px;
+	height:100px;
+
+	margin-bottom:20px;
+	margin-left:20%;
+}
+
+.position {
+	float:left;
+	margin-left:50px;
+}
+
+.position .box {
+	background:black;
+}
+
+/* 3D stuff */
+#right .three-d {
+	position: relative;
+}
+
+#right .position .three-d.horizontal.one {
+	left:1px;
+}
+
+#right .position .three-d.horizontal.two {
+	left:2px;
+}
+
+#right .position .three-d.horizontal.four {
+	left:4px;
+}
+
+#right .position .three-d.vertical.one {
+	top:1px;
+}
+
+#right .position .three-d.vertical.two {
+	top:2px;
+}
+
+#right .position .three-d.vertical.four {
+	top:4px;
+}

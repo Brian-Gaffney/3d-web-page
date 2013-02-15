@@ -1,0 +1,56 @@
+<html>
+	<head>
+
+		<script src="jquery-1.9.0.min.js"></script>
+
+		<meta http-equiv="refresh" content="2">
+
+		<script>
+			$(document).ready(function(){
+
+				window_width = $(window).width()
+
+				//Fake cursors
+				$(window).mousemove(function(e){
+					left_left = (e.pageX / window_width) * (window_width / 2);
+
+					$('.cursor-left').css({
+						left: left_left,
+						top: e.pageY
+					});
+
+					left_right = (e.pageX / window_width) * (window_width / 2) + (window_width / 2);
+
+					$('.cursor-right').css({
+						left: left_right,
+						top: e.pageY
+					});
+				});
+
+				//Duplicate left content on right
+				$('#left').clone().attr('id', 'right').appendTo('body');
+			});
+		</script>
+
+		<link rel="stylesheet" href="reset.css" type="text/css">
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body>
+		<img class="cursor cursor-left" src="cursor.png"/>
+		<img class="cursor cursor-right" src="cursor.png"/>
+
+		<div id="left">
+			<h1 class="three-d four">3D maybe</h1>
+
+			<div class="position">
+				<div class="box three-d horizontal one"></div>
+				<div class="box three-d horizontal two"></div>
+				<div class="box three-d horizontal four"></div>
+
+				<div class="box three-d vertical one"></div>
+				<div class="box three-d vertical two"></div>
+				<div class="box three-d vertical four"></div>
+			</div>
+		</div>
+	</body>
+</html>
